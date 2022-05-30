@@ -25,9 +25,9 @@ describe("Phone Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','400034');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-validation-phone');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid phone.');
         await page.close();      
     });
     test("Verify the wrong value in Phone field", async () => {
@@ -46,9 +46,9 @@ describe("Phone Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','400034');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-validation-phone');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid phone.');
         await page.close();
     });
     test("Verify the lower boundary length in Phone field", async () => {
@@ -67,9 +67,9 @@ describe("Phone Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','400034');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-validation-phone');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid phone.');
         await page.close();
     });
     test("Verify the higher boundary length in Phone field", async () => {
@@ -88,9 +88,9 @@ describe("Phone Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','400034');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-validation-phone');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid phone.');
         await page.close();
     });
     test("Verify the wrong data type in Phone field", async () => {
@@ -109,9 +109,9 @@ describe("Phone Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','400034');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-validation-phone');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid phone.');
         await page.close();
     });
     test("Verify the correct value in Phone field", async () => {

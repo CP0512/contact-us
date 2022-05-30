@@ -25,9 +25,9 @@ describe("Zip Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','400034');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-message-address');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid address.');
         await page.close();      
     });
     test("Verify the invalid value in address field", async () => {
@@ -46,9 +46,9 @@ describe("Zip Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','400034');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-message-address');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid address.');
         await page.close();      
     });
     test("Verify the correct value in address field", async () => {

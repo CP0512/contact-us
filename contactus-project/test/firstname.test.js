@@ -25,9 +25,9 @@ describe("First Name Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','4000347');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-message-firstname');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid first name.');
         await page.close();      
     });
     test("Verify the wrong value in firstname field", async () => {
@@ -46,9 +46,9 @@ describe("First Name Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','4000347');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-message-firstname');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid first name.');
         await page.close();
     });
     test("Verify the lower boundary value in firstname field", async () => {
@@ -67,9 +67,9 @@ describe("First Name Validations", () => {
         await page.waitForSelector('#zip');
         await page.type('#zip','4000347');
         await page.click('#send-btn');
-        let element = await page.$('div#invalid-message-zip');
+        let element = await page.$('div#invalid-message-firstname');
         let value = await page.evaluate(el => el.innerText, element);
-        expect(value.trim()).toBe('Please provide a valid zip.');
+        expect(value.trim()).toBe('Please provide a valid first name.');
         await page.close();
     });
     test("Verify the correct value in firstname field", async () => {
