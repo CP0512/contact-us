@@ -101,7 +101,7 @@ describe("Phone Validations", () => {
         await page.waitForSelector('#lastname');
         await page.type('#lastname','puranik')
         await page.waitForSelector('#phone');
-        await page.type('#phone','8912')
+        await page.type('#phone','chinmay')
         await page.waitForSelector('#phone2');
         await page.type('#phone2','7987654321')
         await page.waitForSelector('#address');
